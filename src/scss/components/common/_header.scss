@@ -1,0 +1,32 @@
+$mobileHeaderHeight: 60px;
+$headerButtonHeight: 68px;
+
+header {
+   padding:20px;
+   border-bottom: 1px solid #979797;
+   padding-bottom: 35px;
+   .user-wrapper {
+      display: flex;
+      @extend .mb-4;
+      justify-content: flex-end;
+      .user{
+         font-size: 1.5rem;
+         text-align: right;
+         + img.ico {
+            height: auto;
+            max-width: 40px;
+            margin-left: 15px;
+         }
+      }      
+   }
+ 
+   .logo-clinica-wrapper {
+      display: inline-block;
+      border-left: 1px solid #979797;
+      padding-left: 10px;
+      .logo-clinica {
+         max-width: 80px;
+      }
+   }
+
+}

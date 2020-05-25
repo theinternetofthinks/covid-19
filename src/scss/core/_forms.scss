@@ -1,0 +1,49 @@
+.select-custom {
+    position: relative;
+    margin-right: 15px;
+    &:before{
+        background-repeat: no-repeat;
+        background-size: 10px;
+        background-position: right 10px;
+        border:0;
+        display: block;
+        width:35px;
+        height: 35px;
+        position: absolute;
+        right: 0;
+        top:0;
+        color:$color-primary;
+        z-index: 1;
+        background-image: url($caret-white);
+        content: "";
+
+        @include media-breakpoint-down(sm) {
+            top:20px;
+
+        }
+    }
+    select{
+        font-size: 14px;
+        color:$color-primary;
+        border:0;
+        position: relative;
+        background: none;
+    }
+}
+
+.form-group {
+    border-bottom: 1px solid $color-primary;
+    input[type=number],
+    input[type=search],   
+    input[type=email],   
+    input[type=tel],   
+    input[type=text],
+    input[type=number] {
+        background: none;
+        border: 0;
+        color:$color-primary
+    }
+ 
+
+
+}

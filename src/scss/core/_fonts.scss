@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Raleway:400,700');
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham/Gotham-Book.woff2') format('woff2'),
+    url('../fonts/Gotham/Gotham-Book.woff') format('woff');
+    font-weight: normal;
+ }
+ 
+ @font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham/Gotham-Light.woff2') format('woff2'),
+    url('../fonts/Gotham/Gotham-Light.woff') format('woff');
+    font-weight: $font-light;
+ }
+ 
+ @font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham/Gotham-Medium.woff2') format('woff2'),
+    url('../fonts/Gotham/Gotham-Medium.woff') format('woff');
+    font-weight: $font-medium;
+ }
+ 
+ @font-face {
+    font-family: 'Gotham';
+    src: url( '../fonts/Gotham/Gotham-Bold.woff2') format('woff2'),
+    url('../fonts/Gotham/Gotham-Bold.woff') format('woff');
+    font-weight: $font-bold;
+ }
+
+
+ @font-face {font-family: "Viva";
+   src: url("//db.onlinewebfonts.com/t/90f55227a060de2045778bb80ffd6d6a.eot");
+   src: url("//db.onlinewebfonts.com/t/90f55227a060de2045778bb80ffd6d6a.eot?#iefix") format("embedded-opentype"),
+   url("//db.onlinewebfonts.com/t/90f55227a060de2045778bb80ffd6d6a.woff2") format("woff2"),
+   url("//db.onlinewebfonts.com/t/90f55227a060de2045778bb80ffd6d6a.woff") format("woff"),
+   url("//db.onlinewebfonts.com/t/90f55227a060de2045778bb80ffd6d6a.ttf") format("truetype"),
+   url("//db.onlinewebfonts.com/t/90f55227a060de2045778bb80ffd6d6a.svg#Viva Beautiful") format("svg");
+}

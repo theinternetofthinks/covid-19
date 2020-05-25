@@ -1,0 +1,36 @@
+
+// VARS
+//$circle-width: 0.09em;
+
+//Nav
+.main-nav {
+	.logo{
+		max-width: 160px;
+		display: block;
+		margin: auto;
+		margin-top: 40px;
+		margin-bottom: 40px;		
+	}
+	li {
+		text-align:center;
+		&:hover {
+			background: #F3F3F3;
+			a {
+				color:#555C60;
+			}
+		}
+		img {
+			display: block;
+			margin: auto;
+			margin-bottom: 15px;
+			max-width: 30px;
+		}
+		a {
+			color:#fff;
+		}
+		border-bottom:1px solid #979797;
+		padding-top:20px;
+		padding-bottom:20px;
+	}
+}
+

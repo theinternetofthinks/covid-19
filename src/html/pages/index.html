@@ -1,0 +1,57 @@
+{{= it.include("core/html-start.html") }}
+
+
+
+<main class="wrapper public" role="main">
+      
+      <nav class="main-nav">
+         <img src="img/logo_pasaporte-digital.png" alt="" class="logo">
+         <ul>
+            <li>
+               <a href="">
+                  <img src="img/icons/ico-bandeja.png" class="ico sm"/>
+                  Bandeja de Entrada
+               </a>
+
+            </li>
+            <li>
+               <a href="">
+                  <img src="img/icons/ico-ficha.png" class="ico sm"/>
+                  Fichas del Paciente
+               </a>
+            </li>
+            <li>
+               <a href="">
+                  <img src="img/icons/ico-gestion.png" class="ico sm"/>
+                  Gestión de inventario
+               </a>
+            </li>
+
+         </ul>
+
+
+
+      </nav>
+      <div class="main-area">
+         {{= it.include("core/header/header.html") }}
+         <div class="row">
+            <div class="col-12">
+
+            </div>
+         </div>
+
+   </main>
+   
+   
+   
+   {{= it.include("core/html-end.html") }}
+   
+   <script>
+      $(function () {
+         Home.init();
+      });
+      
+   </script>
+   
+   
+   
