@@ -122,6 +122,41 @@ i[class*="icon-"] {
 
 
 .icon{
+   &-more{
+      background-color: $color-secondary;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      display: inline-block;
+      border-radius: 50%;
+      &:after {
+         width: 20px;
+         height: 1px;
+         background: #fff;
+         content: "";
+         position: absolute;
+         top:0;
+         bottom:0;
+         left: 0;
+         right: 0;
+         display: block;
+         margin: auto;
+      }
+      &:before {
+         width: 20px;
+         height: 1px;
+         background: #fff;
+         transform: rotate(90deg);
+         content: "";
+         position: absolute;
+         top:0;
+         bottom:0;
+         left: 0;
+         right: 0;
+         display: block;
+         margin: auto;
+      }    
+   }
    &-back{
       background-image: url($caret);
       transform: rotate(90deg);

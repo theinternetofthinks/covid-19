@@ -987,101 +987,11 @@ img {
 }
 
 
-.rounded-img {
-   position: relative;
-   display: block;
-   margin: auto;  
-   max-width: 200px;
-   margin-bottom: 15px;
-
-   img{
-      border-radius: 50%;
-      width: 100%;
-
-   }  
-   &:after {
-      content:"";
-      background: $color-red;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      position: absolute;
-      bottom:15px;
-      left:-20px;
-      display: block;
-      z-index: 1;
-   } 
-   &:before {
-      content:attr(data-title);
-      background: $color-red;
-      font-weight: 100;
-      color: $color-white;
-      text-align: center;
-      font-family: baskerville;
-      font-size: 2.2rem;
-      line-height: 2.2rem;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      position: absolute;
-      top:0;
-      right: -50px;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-
-   }
-}
-
-
 //	--------------------------------------------------
 //	Custom colors
 //  --------------------------------------------------
-
-.hotel {
-   .color-primary.color-primary,
-   .primary-background,
-   .primary-color {
-      color:$color-red!important;
-      fill:$color-red!important;
-   }
-}
 
 .v-middle{
    vertical-align: middle;
 }
 
-
-.separator {
-   height: 60px;
-   position: relative;
-   overflow: visible;
-   border-top:1px solid $color-grey-dark;
-   &:before{
-      position: absolute;
-      left: 0;
-      right: 0;
-      display: block;
-      margin: auto;
-      content: "";
-      width: 60px;
-      height: 60px;
-      top: -30px; 
-      background: $color-white;
-   }
-   &:after {
-      background: url(../img/n-rounded-grey-bg.png);
-      position: absolute;
-      left: 0;
-      right: 0;
-      display: block;
-      margin: auto;
-      content: "";
-      width: 40px;
-      height: 40px;  
-      background-size: contain;
-      top: -20px;    
-   }
-}

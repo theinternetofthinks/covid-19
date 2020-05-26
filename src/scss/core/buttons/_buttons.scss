@@ -91,11 +91,35 @@ button {
       }
   
    }
+   &.btn-passport{
+      padding: 1.5rem 3rem;
+      line-height: 2rem;
+      background-color: #324277;
+      color: $color-white;
+      border: 0px solid;
+      border-radius: 30px;
+      position: relative;
+      padding-left: 50px;
+      &:hover {
+         background: #192754;
+      }
+      &:before{
+         content: "";
+         position: absolute;
+         background-image: url($iso-passport);
+         display: inline-block;
+         width: 20px;
+         height: 20px;
+         left: 20px;
+      }     
+   }
    &.btn-primary {
-      padding: 2rem 2.5rem;
+      padding: 1.5rem 3rem;
       line-height: 2rem;
       background-color: $color-primary;
-      border: none;
+      color: $color-white;
+      border: 0px solid;
+      border-radius: 30px;
 
       [class*="icon-"] {
          &.absolute {
