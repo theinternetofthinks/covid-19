@@ -41,7 +41,7 @@
             <div class="content-area">
                
                <div class="float-right">
-                  <button class="btn btn-secondary">Incluir nueva solicitud</button>
+                  <button class="btn btn-secondary" data-toggle="modal" data-target="#newRequest">Incluir nueva solicitud</button>
                   <button class="btn btn-passport">Emitir Pasaporte</button>
                   
                </div>           
@@ -252,7 +252,7 @@
                <section>
                   
                   <div class="float-right">
-                     <button class="btn btn-text"><span class="icon-more"></span>Añadir nueva solicitud</button>
+                     <button class="btn btn-text" data-toggle="modal" data-target="#newRequest"><span class="icon-more"></span>Añadir nueva solicitud</button>
                      
                   </div>      
                   <h2 class="title-section">Histórico de solicitudes</h2>
@@ -280,8 +280,89 @@
          </div>
       </div>
       
+      <!-- Button trigger modal -->
+      
+      
    </main>
    
+   
+   
+   
+   <!-- Modal -->
+   <div class="modal fade " id="newRequest" tabindex="-1" role="dialog" aria-labelledby="newRequest" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+         <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+            
+            <div class="modal-body">
+               <h2 class="title text-30 mb-4 font-bold">Crear Nueva solicitud para Santiago Pérez</h2>
+               <div class="separator">
+                  
+                  Solicitud para obtener el certificado 
+                  {{= it.include("common/forms/select.html", {
+                     "options" : "",
+                     "selected" : "Nacionalidad",
+                     "id" : "nacionalidad",
+                     "class" : "md",
+                     "disabled" : "false",})
+                  }}
+                  
+               </div>
+               
+               <h3 class="title-section">Selecciona las pruebas que se realizará el paciente</h3>
+               <ul class="two-colums mb-5">
+                  <li class="mb-3">
+                     <div class="checkbox">
+                        <input type="checkbox" name="PCR" id="PCR" value="PCR">
+                        <label for="PCR" class="font-bold">
+                           Test  PCR
+                        </label>
+                     </div> 
+                  </li>
+                  <li class="mb-3">
+                     <div class="checkbox">
+                        <input type="checkbox" name="PCR" id="PCR" value="PCR">
+                        <label for="PCR" class="font-bold">
+                           IgMe -
+                        </label>
+                     </div> 
+                  </li>
+                  <li class="mb-3">
+                     <div class="checkbox">
+                        <input type="checkbox" name="PCR" id="PCR" value="PCR">
+                        <label for="PCR" class="font-bold">
+                           lG M
+                        </label>
+                     </div>         
+                  </li>
+                  
+               </ul>
+               
+               {{= it.include("common/forms/text-field.html", {
+                  "placeholder" : "Fecha realización pruebas",
+                  "type" : "date",
+                  "id" : "dateTesting",
+                  "class" : "lg",
+                  "disabled" : "false",})
+               }}         
+               {{= it.include("common/forms/select.html", {
+                  "options" : "",
+                  "selected" : "Selecciona una hora",
+                  "id" : "seletTimeTest",
+                  "class" : "md",
+                  "disabled" : "false",})
+               }}
+                      
+               
+            </div>
+            <div class="modal-footer text-center">
+               <button type="button" class="btn btn-secondary">Agendar</button>
+            </div>
+         </div>
+      </div>
+   </div>
    
    
    {{= it.include("core/html-end.html") }}

@@ -3,7 +3,15 @@
 //$circle-width: 0.09em;
 
 //Block-certificate
-
+.modal-open {
+	.block-certificate {
+		&:hover {
+			.tooltip{
+				opacity: 0;
+			}
+		}
+	}
+}
 .block-certificate {
 	font-weight: bold;
 	text-align: center;
@@ -55,7 +63,7 @@
 		.info-emision {
 			padding: 10px;
 		}
-	
+		
 	}
 }
 

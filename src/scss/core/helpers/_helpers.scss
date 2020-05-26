@@ -930,7 +930,10 @@ img {
       flex-direction: column;
    }
 }
-
+.two-colums {
+   column-count: 2;
+   column-gap: 20px;
+}
 .top-auto {
    top: auto !important;
 }

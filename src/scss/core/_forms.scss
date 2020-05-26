@@ -10,17 +10,30 @@
         margin-right: 5px;
     }
 }
+.separator,
 fieldset {
     border-bottom: 1px solid $color-secondary;
     padding-bottom: 30px;
     margin-bottom: 30px;
+}
+.modal {
+    .form-group input[type=date],
+    .form-group input[type=number],
+    .form-group input[type=search],   
+    .form-group input[type=email],   
+    .form-group input[type=tel],   
+    .form-group input[type=text],
+    .form-group input[type=number],
+    .select-custom {
+    background: #F3F3F3;
+    }  
 }
 .select-custom {
     position: relative;
     margin-right: 15px;
     background: #fff;
     border-radius: 20px;
-
+    
     &:before{
         background-repeat: no-repeat;
         background-size: 15px;
@@ -52,16 +65,16 @@ fieldset {
     }
 }
 input[type="radio"]{
-     -webkit-appearance: radio;
-     -moz-appearance: radio;
-     position: absolute;
-     width: 25px;
-     height: 25px;
-     top: 0;
-     left: 0;
-     opacity: 0;
-     cursor: pointer;
-
+    -webkit-appearance: radio;
+    -moz-appearance: radio;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    
 }
 .radio {
     position: relative;
@@ -100,7 +113,54 @@ input[type="radio"]{
         }
     }
 }
-
+.checkbox {
+    position: relative;
+    margin-right: 15px;
+    input {
+        -webkit-appearance:checkbox;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+    }
+    input + label {
+        position: relative;
+        text-indent: 25px;
+        pointer-events: none;
+        line-height: 25px;
+        &::before{
+            background: #fff;
+            border:1px solid $color-primary;
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            position: absolute;
+            left: 0px;
+            top: 0px;   
+            pointer-events: none;
+            
+        }
+    }
+    input:checked + label {
+        &::after{
+            content: "";
+            background:url($checked);
+            background-repeat:no-repeat;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            pointer-events: none;
+        }
+    }
+    
+}
 .form-group {
     display: inline-block;
     margin-right: 15px;
@@ -114,6 +174,7 @@ input[type="radio"]{
             min-width: 200px;
         }
     }
+    input[type=date],
     input[type=number],
     input[type=search],   
     input[type=email],   
