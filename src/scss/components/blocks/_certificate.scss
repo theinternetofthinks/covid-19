@@ -7,7 +7,7 @@
 	.block-certificate {
 		&:hover {
 			.tooltip{
-				opacity: 0;
+				display: none;
 			}
 		}
 	}
