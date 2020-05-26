@@ -29,9 +29,15 @@ $bg-main: #F3F3F3;
 	margin-left: $nav-width;
 }
 
+.content-area {
+	padding: 50px;
+}
 
-
-
+section {
+    border-bottom: 1px solid $color-secondary;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
 // CIRCLE
 // classes 2 extend
 .rect-auto{

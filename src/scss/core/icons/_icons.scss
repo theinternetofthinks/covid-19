@@ -122,6 +122,15 @@ i[class*="icon-"] {
 
 
 .icon{
+   &-back{
+      background-image: url($caret);
+      transform: rotate(90deg);
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-size: contain;
+   }
    &-help {
  
       background-image: url(../img/icons/ico-help.png);

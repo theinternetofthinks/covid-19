@@ -1,25 +1,45 @@
+
+.back {
+    display: inline-block;
+    padding: 15px;
+    color:#4F4F4F;
+    font-style: 1.3rem;
+    [class*="icon-"]{
+        top: 5px;
+        position: relative;
+        margin-right: 5px;
+    }
+}
+fieldset {
+    border-bottom: 1px solid $color-secondary;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
 .select-custom {
     position: relative;
     margin-right: 15px;
+    background: #fff;
+    border-radius: 20px;
+
     &:before{
         background-repeat: no-repeat;
-        background-size: 10px;
+        background-size: 15px;
         background-position: right 10px;
         border:0;
         display: block;
         width:35px;
         height: 35px;
         position: absolute;
-        right: 0;
-        top:0;
+        right: 10px;
+        top:0px;
         color:$color-primary;
         z-index: 1;
-        background-image: url($caret-white);
+        background-image: url($caret);
         content: "";
-
+        
         @include media-breakpoint-down(sm) {
             top:20px;
-
+            
         }
     }
     select{
@@ -30,20 +50,82 @@
         background: none;
     }
 }
+input[type="radio"]{
+     -webkit-appearance: radio;
+     -moz-appearance: radio;
+     position: absolute;
+     width: 25px;
+     height: 25px;
+     top: 0;
+     left: 0;
+     opacity: 0;
+     cursor: pointer;
+
+}
+.radio {
+    position: relative;
+    margin-right: 15px;
+    input + label {
+        position: relative;
+        text-indent: 30px;
+        pointer-events: none;
+        &::before{
+            background: #fff;
+            content: "";
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0px;
+            top: 0px;   
+            pointer-events: none;
+            
+        }
+    }
+    input:checked + label {
+        &::after{
+            background: #4F4F4F;
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: absolute;
+            left: 7.5px;
+            top: 7.5px;
+            pointer-events: none;
+        }
+    }
+}
 
 .form-group {
-    border-bottom: 1px solid $color-primary;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    select,
+    .form-control{
+        &.lg {
+            min-width: 300px;
+        }
+        &.md {
+            min-width: 200px;
+        }
+    }
     input[type=number],
     input[type=search],   
     input[type=email],   
     input[type=tel],   
     input[type=text],
     input[type=number] {
-        background: none;
+        display: inline-block;
+        background: #fff;
+        border-radius: 20px;
         border: 0;
-        color:$color-primary
+        font-size: 1.3rem;
+        padding: 10px;
     }
- 
-
-
+    
+    
+    
 }

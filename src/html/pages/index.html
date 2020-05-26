@@ -3,43 +3,229 @@
 
 
 <main class="wrapper public" role="main">
+   
+   <nav class="main-nav">
+      <img src="img/logo_pasaporte-digital.png" alt="" class="logo">
+      <ul>
+         <li>
+            <a href="">
+               <img src="img/icons/ico-bandeja.png" class="ico sm"/>
+               Bandeja de Entrada
+            </a>
+            
+         </li>
+         <li>
+            <a href="">
+               <img src="img/icons/ico-ficha.png" class="ico sm"/>
+               Fichas del Paciente
+            </a>
+         </li>
+         <li>
+            <a href="">
+               <img src="img/icons/ico-gestion.png" class="ico sm"/>
+               Gestión de inventario
+            </a>
+         </li>
+         
+      </ul>
       
-      <nav class="main-nav">
-         <img src="img/logo_pasaporte-digital.png" alt="" class="logo">
-         <ul>
-            <li>
-               <a href="">
-                  <img src="img/icons/ico-bandeja.png" class="ico sm"/>
-                  Bandeja de Entrada
-               </a>
+      
+      
+   </nav>
+   <div class="main-area">
+      {{= it.include("core/header/header.html") }}
+      <a href="" class="back"><span class="icon-back"></span>Búsqueda de pacientes</a>
+      
+      <div class="row">
+         <div class="col-12">
+            <div class="content-area">
+               
+               
+               <h2 class="title-page">Ficha del Paciente</h2>
+               
+               <form>
+                  
+                  <fieldset>
+                     
+                     <legend class="title-section">Datos Personales</legend>
 
-            </li>
-            <li>
-               <a href="">
-                  <img src="img/icons/ico-ficha.png" class="ico sm"/>
-                  Fichas del Paciente
-               </a>
-            </li>
-            <li>
-               <a href="">
-                  <img src="img/icons/ico-gestion.png" class="ico sm"/>
-                  Gestión de inventario
-               </a>
-            </li>
+                     {{= it.include("common/forms/text-field.html", {
+                        "placeholder" : "ID de cliente",
+                        "type" : "text",
+                        "id" : "idCliente",
+                        "class" : "lg",
+                        "disabled" : "false",})
+                     }}
+                     <div class="d-flex">
+                        {{= it.include("common/forms/text-field.html", {
+                           "placeholder" : "Nombre",
+                           "type" : "text",
+                           "id" : "nombre",
+                           "class" : "md",
+                           "disabled" : "false",})
+                        }}
+                        {{= it.include("common/forms/text-field.html", {
+                           "placeholder" : "Apellidos",
+                           "type" : "text",
+                           "id" : "apellidos",
+                           "class" : "md",
+                           "disabled" : "false",})
+                        }}   
+                        {{= it.include("common/forms/radio.html", {
+                           "type" : "radio",
+                           "name" : "gender",
+                           "id" : "hombre",
+                           "value" : "hombre",
+                           "label" : "Hombre",
+                           "checked" : "false",})
+                        }}                    
+                        {{= it.include("common/forms/radio.html", {
+                           "type" : "radio",
+                           "name" : "gender",
+                           "id" : "mujer",
+                           "value" : "mujer",
+                           "label" : "Mujer",
+                           "checked" : "false",})
+                        }}                  
+                        
+                        
+                     </div>
+                     <div class="d-flex">
+                        
+                        {{= it.include("common/forms/select.html", {
+                           "options" : "",
+                           "selected" : "Nacionalidad",
+                           "id" : "nacionalidad",
+                           "class" : "md",
+                           "disabled" : "false",})
+                        }}
+                        {{= it.include("common/forms/select.html", {
+                           "options" : "",
+                           "selected" : "Fecha de Naciento",
+                           "id" : "nacimiento",
+                           "class" : "md",
+                           "disabled" : "false",})
+                        }}
+                        {{= it.include("common/forms/select.html", {
+                           "options" : "",
+                           "selected" : "Tipo de Documento",
+                           "id" : "tipoDocumento",
+                           "class" : "md",
+                           "disabled" : "false",})
+                        }}
+                        
+                        {{= it.include("common/forms/text-field.html", {
+                           "placeholder" : "Número de documento",
+                           "type" : "text",
+                           "id" : "numerodocumento",
+                           "class" : "md",
+                           "disabled" : "false",})
+                        }}
+                        
+                        
+                        
+                     </div>
+                  </fieldset>
+                  <fieldset>
+                     <legend class="title-section">Datos de Contacto</legend>
 
-         </ul>
+                        <div class="d-flex">
+
+
+                           {{= it.include("common/forms/text-field.html", {
+                              "placeholder" : "Email",
+                              "type" : "email",
+                              "id" : "email",
+                              "class" : "lg",
+                              "disabled" : "false",})
+                           }}
+                           {{= it.include("common/forms/text-field.html", {
+                              "placeholder" : "Número de teléfono",
+                              "type" : "tel",
+                              "id" : "telefono",
+                              "class" : "md",
+                              "disabled" : "false",})
+                           }} 
+
+
+                        </div>
 
 
 
-      </nav>
-      <div class="main-area">
-         {{= it.include("core/header/header.html") }}
-         <div class="row">
-            <div class="col-12">
+                        <div class="d-flex">
 
+
+                           {{= it.include("common/forms/text-field.html", {
+                              "placeholder" : "Nombre del Familiar",
+                              "type" : "text",
+                              "id" : "nombreFamiliar",
+                              "class" : "lg",
+                              "disabled" : "false",})
+                           }}
+                           {{= it.include("common/forms/text-field.html", {
+                              "placeholder" : "Teléfono del familiar",
+                              "type" : "text",
+                              "id" : "telefonoFamiliar",
+                              "class" : "md",
+                              "disabled" : "false",})
+                           }} 
+
+
+                        </div>
+
+
+
+                  </fieldset>
+               </form>              
+               
+               
+               <section>
+
+                  <h2 class="title-section">Estado actual de certificados</h2>
+
+                  <div class="d-flex">
+                     <div class="certificate">
+
+                        Apto <span class="d-block">Covid-19</span>
+                     </div>
+                     <div class="certificate">
+
+                        No apto <span class="d-block">Hepatitis</span>
+                     </div>
+                     
+                     <div class="certificate">
+
+                        Apto <span class="d-block">Tetanos</span>
+                     </div>
+                  </div>
+
+
+
+
+
+               </section>
+
+               <section>
+
+                  <h2 class="title-section">Histórico de solicitudes</h2>
+
+
+               </section>
+               <section>
+
+                  <h2 class="title-section">Histórico Certificados</h2>
+
+
+               </section>
+
+
+               
             </div>
+            
+            
          </div>
-
+      </div>
+      
    </main>
    
    

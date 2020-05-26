@@ -145,104 +145,18 @@ a {
    overflow: hidden;
 }
 
-.title-bg {
-   position: relative;
-   &::before{
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      display: block;
-      margin: auto;
-      width: 60px;
-      height: 60px;
-      content: "";
-      background: url(../img/n-bg.png);
-      background-size: cover;
-      z-index: -1;
-   }
-}
-
 .title-page {
-   font-size: 1.8rem;
-   line-height: 2rem;
-   margin-bottom: 1.5rem;
-   color: $color-black;
-   font-weight: $font-bold;
-
-   @include media-breakpoint-down(md) {
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 2rem;
-   }
-}
-.title-decorator{
-   position: relative;
-   text-align: center;
-   font-family: baskerville;
-   font-weight: bold;
-   display: inline-block;
-   &:before {
-      content: "";
-      width: 15px;
-      height: 1px;
-      background: $color-red;
-      position: absolute;
-      top:0;
-      bottom: 0;
-      display: block;
-      margin: auto;
-      left: -20px;
-   }
-   &:after {
-      content: "";
-      width: 15px;
-      height: 1px;
-      background: $color-red;
-      position: absolute;
-      top:0;
-      bottom: 0;
-      display: block;
-      margin: auto;
-      right: -20px;
-
-   }   
-}
-.title-section {
-   font-size: 2.8rem;
+   font-size: 2.4rem;
    line-height: 2.6rem;
-   margin-bottom: 2.2rem;
-   font-weight: $font-bold;
+   margin-bottom: 30px;
    color: $color-gunmetal;
-   font-family: "baskerville";
-   border-bottom:1px solid $color-grey;
-   &--center {
-      font-size: 2.8rem;
-      font-weight: $font-normal;
-      display: inline-block;
-      position: relative;
-      margin-bottom: 4rem;
-
-      &::before {
-         content: "";
-         display: block;
-         background: $color-black;
-         height: 1px;
-         width: 35%;
-         position: absolute;
-         display: block;
-         margin: auto;
-         bottom: -70%;
-         left: 0;
-         right: 0;
-      }
-   }
+   margin-bottom: 30px;
 }
 
-.subtitle-section {
+.title-section {
    @extend .text-18;
-
+   margin-bottom: 15px;
+   font-weight: bold;
    &--highlighted {
       font-size: 2.8rem;
    }
