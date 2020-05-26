@@ -1,0 +1,35 @@
+
+// VARS
+//$circle-width: 0.09em;
+
+//Block-certificate
+
+.block-certificate {
+	font-weight: bold;
+	text-align: center;
+	line-height: 16px;
+	padding: 15px;
+	position: relative;
+	img {
+		height: 40px;
+		margin: auto;
+		display: block;
+		margin-bottom: 10px;
+	}
+	.tooltip {
+		position: absolute;
+		background: #fff;
+		font-size: 1.6rem;
+		padding: 20px;
+		opacity: 1;
+		color:$color-primary;
+		span {
+			white-space: nowrap;
+		}
+		.info-centificado{
+			border-bottom:1px solid $color-primary;
+		}
+	
+	}
+}
+

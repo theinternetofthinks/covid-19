@@ -133,12 +133,12 @@ button {
    }
 
    &.btn-secondary {
-      padding: 2rem 2.5rem;
+      padding: 1.5rem 3rem;
       line-height: 2rem;
-      background-color: $color-white;
+      background-color: $color-secondary;
       color: $color-primary;
-      border-color: $color-primary;
-      border: 1px solid;
+      border: 0px solid;
+      border-radius: 30px;
       &_transparent{
          background: none;
          border: 1px solid $color-primary;
