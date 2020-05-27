@@ -1,0 +1,199 @@
+{{= it.include("core/html-start.html") }}
+
+
+
+<main class="wrapper public" role="main">
+   
+   <nav class="main-nav">
+      <img src="img/logo_pasaporte-digital.png" alt="" class="logo">
+      <ul>
+         <li>
+            <a href="">
+               <img src="img/icons/ico-bandeja.png" class="ico sm"/>
+               <span>Bandeja de Entrada</span>
+            </a>
+            
+         </li>
+         <li>
+            <a href="">
+               <img src="img/icons/ico-ficha.png" class="ico sm"/>
+               <span>>Fichas del Paciente</span>
+            </a>
+         </li>
+         <li>
+            <a href="">
+               <img src="img/icons/ico-gestion.png" class="ico sm"/>
+               <span>Gestión de inventario</span>
+            </a>
+         </li>
+         
+      </ul>
+      
+      
+      
+   </nav>
+   <div class="main-area">
+      <div class="container">
+         
+         
+         
+         {{= it.include("core/header/header.html") }}
+         <a href="" class="back"><span class="icon-back"></span>Ficha de pacientes</a>
+         
+         <div class="row">
+            <div class="col-12">
+               <div class="content-area">
+                  
+                  <div class="float-none float-md-right wrapper_buttons--inline mb-5 mb-md-0">
+                     <button class="btn btn-text" data-toggle="modal" data-target="#newRequest"><span class="icon-more"></span>Añadir Alta de Prueba</button>
+                     
+                  </div>           
+                  
+                  <h2 class="title-page">Solicitud <strong class="num-solicitud">234567</strong></h2>
+                  
+                  
+                  <section>
+                     
+                     <h3 class="title-section">Datos de la Solicitud</h3>
+                     <p>Fecha de la Solicitud: <strong>20/05/2020</strong></p>
+                     <div class="d-flex">
+                        <p>Solicitud para obtener el certificado</p>
+                        
+                        {{= it.include("common/forms/select.html", {
+                           "options" : "",
+                           "selected" : "Cocid 19",
+                           "id" : "nacionalidad",
+                           "class" : "md",
+                           "disabled" : "false",})
+                        }}
+                     </div>
+                     
+                     
+                  </span>
+                  
+                  
+               </section>
+               <section>
+                  <h3 class="title-section">Listado de pruebas</h3>
+                  
+                  
+                  
+               </section>
+               <section>
+                  <h3 class="title-section">Datos del Certificado</h3>
+                  
+                  
+                  
+               </section>
+               
+               
+               
+               
+               
+            </div>
+            
+            
+         </div>
+      </div>
+      
+   </div>      
+</div>
+</main>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade " id="newRequest" tabindex="-1" role="dialog" aria-labelledby="newRequest" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+         
+         <div class="modal-body">
+            <h2 class="title text-30 mb-4 font-bold">Crear Nueva solicitud para Santiago Pérez</h2>
+            <div class="separator">
+               
+               Solicitud para obtener el certificado 
+               {{= it.include("common/forms/select.html", {
+                  "options" : "",
+                  "selected" : "Nacionalidad",
+                  "id" : "nacionalidad",
+                  "class" : "md",
+                  "disabled" : "false",})
+               }}
+               
+            </div>
+            
+            <h3 class="title-section">Selecciona las pruebas que se realizará el paciente</h3>
+            <ul class="two-colums mb-5">
+               <li class="mb-3">
+                  
+                  {{= it.include("common/forms/checkbox.html", {
+                     "type" : "checkbox",
+                     "name" : "pcr",
+                     "id" : "pcr",
+                     "value" : "pcr",
+                     "label" : "Test PCR",
+                     "checked" : "false",})
+                  }} 
+               </li>
+               <li class="mb-3">
+                  {{= it.include("common/forms/checkbox.html", {
+                     "type" : "checkbox",
+                     "name" : "lGM",
+                     "id" : "lGM",
+                     "value" : "lGM",
+                     "label" : "l GM",
+                     "checked" : "false",})
+                  }} 
+               </li>
+               <li class="mb-3">
+                  {{= it.include("common/forms/checkbox.html", {
+                     "type" : "checkbox",
+                     "name" : "IgMe",
+                     "id" : "IgMe",
+                     "value" : "IgMe",
+                     "label" : "IgMe -",
+                     "checked" : "false",})
+                  }}        
+               </li>
+               
+            </ul>
+            
+            {{= it.include("common/forms/text-field.html", {
+               "placeholder" : "Fecha realización pruebas",
+               "type" : "date",
+               "id" : "dateTesting",
+               "class" : "lg",
+               "disabled" : "false",})
+            }}         
+            {{= it.include("common/forms/select.html", {
+               "options" : "",
+               "selected" : "Selecciona una hora",
+               "id" : "seletTimeTest",
+               "class" : "md",
+               "disabled" : "false",})
+            }}
+            
+            
+         </div>
+         <div class="modal-footer text-center">
+            <button type="button" class="btn btn-secondary">Agendar</button>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+{{= it.include("core/html-end.html") }}
+
+<script>
+   $(function () {
+      Home.init();
+   });
+   
+</script>
+
+
