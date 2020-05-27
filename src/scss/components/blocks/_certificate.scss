@@ -44,6 +44,9 @@
 		top:0px;
 		color:$color-primary;
 		min-width: 300px;
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
 		&:before{
 			content:"";
 			width: 0;

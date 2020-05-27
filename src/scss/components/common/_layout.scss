@@ -34,17 +34,29 @@ $bg-main: #F3F3F3;
 	left: 0;
 	top:0;
 	@include media-breakpoint-down(md) {
-		width: 100%;
-		height:100px ;
-		top:100vh;
+		width: 100vw;
+		height:100px;
+		z-index: 9;
+		top: calc(100vh - 100px);
+		
 		img.logo {
 			display:none;
 		}
 		ul {
 			display: flex;
+			flex-basis: 0;
+			flex-grow: 1;
+			justify-content: center;
+
 			li {
 				border-bottom: 0;
 				border-right: 1px solid #fff;
+				width: 100%;
+				a {
+					span {
+						display: none;
+					}
+				}
 				&:last-child{
 					border-right: 0;
 				}
@@ -72,7 +84,7 @@ $bg-main: #F3F3F3;
 	}	
 }
 
-.wrapper_buttons {
+.wrapper_buttons {	
 	&--inline {
 		display:flex;
 		.btn {

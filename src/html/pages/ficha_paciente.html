@@ -10,20 +10,20 @@
          <li>
             <a href="">
                <img src="img/icons/ico-bandeja.png" class="ico sm"/>
-               Bandeja de Entrada
+               <span>Bandeja de Entrada</span>
             </a>
             
          </li>
          <li>
             <a href="">
                <img src="img/icons/ico-ficha.png" class="ico sm"/>
-               Fichas del Paciente
+               <span>>Fichas del Paciente</span>
             </a>
          </li>
          <li>
             <a href="">
                <img src="img/icons/ico-gestion.png" class="ico sm"/>
-               Gestión de inventario
+               <span>Gestión de inventario</span>
             </a>
          </li>
          
@@ -33,353 +33,352 @@
       
    </nav>
    <div class="main-area">
-      {{= it.include("core/header/header.html") }}
-      <a href="" class="back"><span class="icon-back"></span>Búsqueda de pacientes</a>
-      
-      <div class="row">
-         <div class="col-12">
-            <div class="content-area">
-               
-               <div class="float-right wrapper_buttons--inline mb-5 mb-md-0">
-                  <button class="btn btn-secondary" data-toggle="modal" data-target="#newRequest">Incluir nueva solicitud</button>
-                  <button class="btn btn-passport">Emitir Pasaporte</button>
+      <div class="container">
+         
+         
+         
+         {{= it.include("core/header/header.html") }}
+         <a href="" class="back"><span class="icon-back"></span>Búsqueda de pacientes</a>
+         
+         <div class="row">
+            <div class="col-12">
+               <div class="content-area">
                   
-               </div>           
-               
-               <h2 class="title-page">Ficha del Paciente</h2>
-               
-               <form>
+                  <div class="float-none float-md-right wrapper_buttons--inline mb-5 mb-md-0">
+                     <button class="btn btn-secondary" data-toggle="modal" data-target="#newRequest">Incluir nueva solicitud</button>
+                     <button class="btn btn-passport">Emitir Pasaporte</button>
+                     
+                  </div>           
                   
-                  <fieldset>
+                  <h2 class="title-page">Ficha del Paciente</h2>
+                  
+                  <form>
                      
-                     <legend class="title-section">Datos Personales</legend>
+                     <fieldset>
+                        
+                        <legend class="title-section">Datos Personales</legend>
+                        
+                        {{= it.include("common/forms/text-field.html", {
+                           "placeholder" : "ID de cliente",
+                           "type" : "text",
+                           "id" : "idCliente",
+                           "class" : "lg",
+                           "disabled" : "false",})
+                        }}
+                        <div class="d-xl-flex d-block">
+                           {{= it.include("common/forms/text-field.html", {
+                              "placeholder" : "Nombre",
+                              "type" : "text",
+                              "id" : "nombre",
+                              "class" : "md",
+                              "disabled" : "false",})
+                           }}
+                           {{= it.include("common/forms/text-field.html", {
+                              "placeholder" : "Apellidos",
+                              "type" : "text",
+                              "id" : "apellidos",
+                              "class" : "md",
+                              "disabled" : "false",})
+                           }}   
+                           {{= it.include("common/forms/radio.html", {
+                              "type" : "radio",
+                              "name" : "gender",
+                              "id" : "hombre",
+                              "value" : "hombre",
+                              "label" : "Hombre",
+                              "checked" : "false",})
+                           }}                    
+                           {{= it.include("common/forms/radio.html", {
+                              "type" : "radio",
+                              "name" : "gender",
+                              "id" : "mujer",
+                              "value" : "mujer",
+                              "label" : "Mujer",
+                              "checked" : "false",})
+                           }}                  
+                           
+                           
+                        </div>
+                        <div class="d-xl-flex d-block">
+                           
+                           {{= it.include("common/forms/select.html", {
+                              "options" : "",
+                              "selected" : "Nacionalidad",
+                              "id" : "nacionalidad",
+                              "class" : "md",
+                              "disabled" : "false",})
+                           }}
+                           {{= it.include("common/forms/select.html", {
+                              "options" : "",
+                              "selected" : "Fecha de Naciento",
+                              "id" : "nacimiento",
+                              "class" : "md",
+                              "disabled" : "false",})
+                           }}
+                           {{= it.include("common/forms/select.html", {
+                              "options" : "",
+                              "selected" : "Tipo de Documento",
+                              "id" : "tipoDocumento",
+                              "class" : "md",
+                              "disabled" : "false",})
+                           }}
+                           
+                           {{= it.include("common/forms/text-field.html", {
+                              "placeholder" : "Número de documento",
+                              "type" : "text",
+                              "id" : "numerodocumento",
+                              "class" : "md",
+                              "disabled" : "false",})
+                           }}
+                           
+                           
+                           
+                        </div>
+                        <div class="text-center mt-5">
+                           <button class="btn btn-secondary">Escanear Documento</button>
+                        </div>
+                        
+                     </fieldset>
+                     <fieldset>
+                        <legend class="title-section">Datos de Contacto</legend>
+                        
+                        <div class="d-xl-flex d-block">
+                           
+                           
+                           {{= it.include("common/forms/text-field.html", {
+                              "placeholder" : "Email",
+                              "type" : "email",
+                              "id" : "email",
+                              "class" : "lg",
+                              "disabled" : "false",})
+                           }}
+                           {{= it.include("common/forms/text-field.html", {
+                              "placeholder" : "Número de teléfono",
+                              "type" : "tel",
+                              "id" : "telefono",
+                              "class" : "md",
+                              "disabled" : "false",})
+                           }} 
+                           
+                           
+                        </div>
+                        
+                        
+                        <div class="d-xl-flex d-block">
+                           
+                           
+                           {{= it.include("common/forms/text-field.html", {
+                              "placeholder" : "Nombre del Familiar",
+                              "type" : "text",
+                              "id" : "nombreFamiliar",
+                              "class" : "lg",
+                              "disabled" : "false",})
+                           }}
+                           {{= it.include("common/forms/text-field.html", {
+                              "placeholder" : "Teléfono del familiar",
+                              "type" : "text",
+                              "id" : "telefonoFamiliar",
+                              "class" : "md",
+                              "disabled" : "false",})
+                           }} 
+                           
+                           
+                        </div>
+                        <div class="text-center mt-5">
+                           <button class="btn btn-secondary">Editar datos</button>
+                        </div>
+                        
+                     </fieldset>
+                  </form>              
+                  
+                  
+                  <section>
                      
+                     <h2 class="title-section">Estado actual de certificados</h2>
+                     
+                     <div class="block-certificates-wrapper">
+                        <div class="block-certificate">
+                           <img src="img/icons/icon-cert-ok.svg">
+                           Apto <span class="d-block">Covid-19</span>
+                           <div class="tooltip">
+                              <div class="info-centificado">
+                                 <span>ID Certificado:</span>
+                                 <strong>6578</strong>
+                              </div>
+                              <div class="info-emision">
+                                 <span>Fecha emisión</span>
+                                 <strong>2/5/2020</strong>
+                              </div>
+                              
+                           </div>
+                        </div>
+                        <div class="block-certificate">
+                           <img src="img/icons/icon-cert-ko.svg">
+                           No apto <span class="d-block">Hepatitis</span>
+                           <div class="tooltip">
+                              <div class="info-centificado">
+                                 <span>ID Certificado:</span>
+                                 <strong>6578</strong>
+                              </div>
+                              <div class="info-emision">
+                                 <span>Fecha emisión</span>
+                                 <strong>2/5/2020</strong>
+                              </div>
+                              
+                           </div>
+                           
+                           
+                        </div>
+                        
+                        <div class="block-certificate">
+                           <img src="img/icons/icon-cert-ok.svg">
+                           Apto <span class="d-block">Tetanos</span>
+                           <div class="tooltip">
+                              <div class="info-centificado">
+                                 <span>ID Certificado:</span>
+                                 <strong>6578</strong>
+                              </div>
+                              <div class="info-emision">
+                                 <span>Fecha emisión</span>
+                                 <strong>2/5/2020</strong>
+                              </div>
+                              
+                           </div>                        
+                        </div>
+                     </div>
+                     
+                     
+                  </section>
+                  
+                  <section>
+                     
+                     <div class="float-right mb-5">
+                        <button class="btn btn-text" data-toggle="modal" data-target="#newRequest"><span class="icon-more"></span>Añadir nueva solicitud</button>
+                        
+                     </div>      
+                     <h2 class="title-section">Histórico de solicitudes</h2>
                      {{= it.include("common/forms/text-field.html", {
-                        "placeholder" : "ID de cliente",
+                        "placeholder" : "Buscar por id de Solicitud",
                         "type" : "text",
-                        "id" : "idCliente",
+                        "id" : "buscarSoliditus",
                         "class" : "lg",
                         "disabled" : "false",})
-                     }}
-                     <div class="d-md-flex d-block">
-                        {{= it.include("common/forms/text-field.html", {
-                           "placeholder" : "Nombre",
-                           "type" : "text",
-                           "id" : "nombre",
-                           "class" : "md",
-                           "disabled" : "false",})
-                        }}
-                        {{= it.include("common/forms/text-field.html", {
-                           "placeholder" : "Apellidos",
-                           "type" : "text",
-                           "id" : "apellidos",
-                           "class" : "md",
-                           "disabled" : "false",})
-                        }}   
-                        {{= it.include("common/forms/radio.html", {
-                           "type" : "radio",
-                           "name" : "gender",
-                           "id" : "hombre",
-                           "value" : "hombre",
-                           "label" : "Hombre",
-                           "checked" : "false",})
-                        }}                    
-                        {{= it.include("common/forms/radio.html", {
-                           "type" : "radio",
-                           "name" : "gender",
-                           "id" : "mujer",
-                           "value" : "mujer",
-                           "label" : "Mujer",
-                           "checked" : "false",})
-                        }}                  
-                        
-                        
-                     </div>
-                     <div class="d-md-flex d-block">
-                        
-                        {{= it.include("common/forms/select.html", {
-                           "options" : "",
-                           "selected" : "Nacionalidad",
-                           "id" : "nacionalidad",
-                           "class" : "md",
-                           "disabled" : "false",})
-                        }}
-                        {{= it.include("common/forms/select.html", {
-                           "options" : "",
-                           "selected" : "Fecha de Naciento",
-                           "id" : "nacimiento",
-                           "class" : "md",
-                           "disabled" : "false",})
-                        }}
-                        {{= it.include("common/forms/select.html", {
-                           "options" : "",
-                           "selected" : "Tipo de Documento",
-                           "id" : "tipoDocumento",
-                           "class" : "md",
-                           "disabled" : "false",})
-                        }}
-                        
-                        {{= it.include("common/forms/text-field.html", {
-                           "placeholder" : "Número de documento",
-                           "type" : "text",
-                           "id" : "numerodocumento",
-                           "class" : "md",
-                           "disabled" : "false",})
-                        }}
-                        
-                        
-                        
-                     </div>
-                     <div class="text-center mt-5">
-                        <button class="btn btn-secondary">Escanear Documento</button>
-                     </div>
+                     }}         
                      
-                  </fieldset>
-                  <fieldset>
-                     <legend class="title-section">Datos de Contacto</legend>
+                  </section>
+                  <section>
                      
-                     <div class="d-md-flex d-block">
-                        
-                        
-                        {{= it.include("common/forms/text-field.html", {
-                           "placeholder" : "Email",
-                           "type" : "email",
-                           "id" : "email",
-                           "class" : "lg",
-                           "disabled" : "false",})
-                        }}
-                        {{= it.include("common/forms/text-field.html", {
-                           "placeholder" : "Número de teléfono",
-                           "type" : "tel",
-                           "id" : "telefono",
-                           "class" : "md",
-                           "disabled" : "false",})
-                        }} 
-                        
-                        
-                     </div>
+                     <h2 class="title-section">Histórico Certificados</h2>
                      
                      
-                     <div class="d-md-flex d-block">
-                        
-                        
-                        {{= it.include("common/forms/text-field.html", {
-                           "placeholder" : "Nombre del Familiar",
-                           "type" : "text",
-                           "id" : "nombreFamiliar",
-                           "class" : "lg",
-                           "disabled" : "false",})
-                        }}
-                        {{= it.include("common/forms/text-field.html", {
-                           "placeholder" : "Teléfono del familiar",
-                           "type" : "text",
-                           "id" : "telefonoFamiliar",
-                           "class" : "md",
-                           "disabled" : "false",})
-                        }} 
-                        
-                        
-                     </div>
-                     <div class="text-center mt-5">
-                        <button class="btn btn-secondary">Editar datos</button>
-                     </div>
-                     
-                  </fieldset>
-               </form>              
-               
-               
-               <section>
-                  
-                  <h2 class="title-section">Estado actual de certificados</h2>
-                  
-                  <div class="block-certificates-wrapper">
-                     <div class="block-certificate">
-                        <img src="img/icons/icon-cert-ok.svg">
-                        Apto <span class="d-block">Covid-19</span>
-                        <div class="tooltip">
-                           <div class="info-centificado">
-                              <span>ID Certificado:</span>
-                              <strong>6578</strong>
-                           </div>
-                           <div class="info-emision">
-                              <span>Fecha emisión</span>
-                              <strong>2/5/2020</strong>
-                           </div>
-                           
-                        </div>
-                     </div>
-                     <div class="block-certificate">
-                        <img src="img/icons/icon-cert-ko.svg">
-                        No apto <span class="d-block">Hepatitis</span>
-                        <div class="tooltip">
-                           <div class="info-centificado">
-                              <span>ID Certificado:</span>
-                              <strong>6578</strong>
-                           </div>
-                           <div class="info-emision">
-                              <span>Fecha emisión</span>
-                              <strong>2/5/2020</strong>
-                           </div>
-                           
-                        </div>
-                        
-                        
-                     </div>
-                     
-                     <div class="block-certificate">
-                        <img src="img/icons/icon-cert-ok.svg">
-                        Apto <span class="d-block">Tetanos</span>
-                        <div class="tooltip">
-                           <div class="info-centificado">
-                              <span>ID Certificado:</span>
-                              <strong>6578</strong>
-                           </div>
-                           <div class="info-emision">
-                              <span>Fecha emisión</span>
-                              <strong>2/5/2020</strong>
-                           </div>
-                           
-                        </div>                        
-                     </div>
-                  </div>
+                  </section>
                   
                   
-                  
-                  
-                  
-               </section>
-               
-               <section>
-                  
-                  <div class="float-right">
-                     <button class="btn btn-text" data-toggle="modal" data-target="#newRequest"><span class="icon-more"></span>Añadir nueva solicitud</button>
-                     
-                  </div>      
-                  <h2 class="title-section">Histórico de solicitudes</h2>
-                  {{= it.include("common/forms/text-field.html", {
-                     "placeholder" : "Buscar por id de Solicitud",
-                     "type" : "text",
-                     "id" : "buscarSoliditus",
-                     "class" : "lg",
-                     "disabled" : "false",})
-                  }}         
-                  
-               </section>
-               <section>
-                  
-                  <h2 class="title-section">Histórico Certificados</h2>
-                  
-                  
-               </section>
-               
-               
-               
-            </div>
-            
-            
-         </div>
-      </div>
-      
-      <!-- Button trigger modal -->
-      
-      
-   </main>
-   
-   
-   
-   
-   <!-- Modal -->
-   <div class="modal fade " id="newRequest" tabindex="-1" role="dialog" aria-labelledby="newRequest" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-               <span aria-hidden="true">&times;</span>
-            </button>
-            
-            <div class="modal-body">
-               <h2 class="title text-30 mb-4 font-bold">Crear Nueva solicitud para Santiago Pérez</h2>
-               <div class="separator">
-                  
-                  Solicitud para obtener el certificado 
-                  {{= it.include("common/forms/select.html", {
-                     "options" : "",
-                     "selected" : "Nacionalidad",
-                     "id" : "nacionalidad",
-                     "class" : "md",
-                     "disabled" : "false",})
-                  }}
                   
                </div>
                
-               <h3 class="title-section">Selecciona las pruebas que se realizará el paciente</h3>
-               <ul class="two-colums mb-5">
-                  <li class="mb-3">
-
-                     {{= it.include("common/forms/checkbox.html", {
-                        "type" : "checkbox",
-                        "name" : "pcr",
-                        "id" : "pcr",
-                        "value" : "pcr",
-                        "label" : "Test PCR",
-                        "checked" : "false",})
-                     }} 
-                  </li>
-                  <li class="mb-3">
-                     {{= it.include("common/forms/checkbox.html", {
-                        "type" : "checkbox",
-                        "name" : "lGM",
-                        "id" : "lGM",
-                        "value" : "lGM",
-                        "label" : "l GM",
-                        "checked" : "false",})
-                     }} 
-                  </li>
-                  <li class="mb-3">
-                     {{= it.include("common/forms/checkbox.html", {
-                        "type" : "checkbox",
-                        "name" : "IgMe",
-                        "id" : "IgMe",
-                        "value" : "IgMe",
-                        "label" : "IgMe -",
-                        "checked" : "false",})
-                     }}        
-                  </li>
-                  
-               </ul>
                
-               {{= it.include("common/forms/text-field.html", {
-                  "placeholder" : "Fecha realización pruebas",
-                  "type" : "date",
-                  "id" : "dateTesting",
-                  "class" : "lg",
-                  "disabled" : "false",})
-               }}         
+            </div>
+         </div>
+         
+      </div>      
+   </div>
+</main>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade " id="newRequest" tabindex="-1" role="dialog" aria-labelledby="newRequest" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+         
+         <div class="modal-body">
+            <h2 class="title text-30 mb-4 font-bold">Crear Nueva solicitud para Santiago Pérez</h2>
+            <div class="separator">
+               
+               Solicitud para obtener el certificado 
                {{= it.include("common/forms/select.html", {
                   "options" : "",
-                  "selected" : "Selecciona una hora",
-                  "id" : "seletTimeTest",
+                  "selected" : "Nacionalidad",
+                  "id" : "nacionalidad",
                   "class" : "md",
                   "disabled" : "false",})
                }}
-                      
                
             </div>
-            <div class="modal-footer text-center">
-               <button type="button" class="btn btn-secondary">Agendar</button>
-            </div>
+            
+            <h3 class="title-section">Selecciona las pruebas que se realizará el paciente</h3>
+            <ul class="two-colums mb-5">
+               <li class="mb-3">
+                  
+                  {{= it.include("common/forms/checkbox.html", {
+                     "type" : "checkbox",
+                     "name" : "pcr",
+                     "id" : "pcr",
+                     "value" : "pcr",
+                     "label" : "Test PCR",
+                     "checked" : "false",})
+                  }} 
+               </li>
+               <li class="mb-3">
+                  {{= it.include("common/forms/checkbox.html", {
+                     "type" : "checkbox",
+                     "name" : "lGM",
+                     "id" : "lGM",
+                     "value" : "lGM",
+                     "label" : "l GM",
+                     "checked" : "false",})
+                  }} 
+               </li>
+               <li class="mb-3">
+                  {{= it.include("common/forms/checkbox.html", {
+                     "type" : "checkbox",
+                     "name" : "IgMe",
+                     "id" : "IgMe",
+                     "value" : "IgMe",
+                     "label" : "IgMe -",
+                     "checked" : "false",})
+                  }}        
+               </li>
+               
+            </ul>
+            
+            {{= it.include("common/forms/text-field.html", {
+               "placeholder" : "Fecha realización pruebas",
+               "type" : "date",
+               "id" : "dateTesting",
+               "class" : "lg",
+               "disabled" : "false",})
+            }}         
+            {{= it.include("common/forms/select.html", {
+               "options" : "",
+               "selected" : "Selecciona una hora",
+               "id" : "seletTimeTest",
+               "class" : "md",
+               "disabled" : "false",})
+            }}
+            
+            
+         </div>
+         <div class="modal-footer text-center">
+            <button type="button" class="btn btn-secondary">Agendar</button>
          </div>
       </div>
    </div>
+</div>
+
+
+{{= it.include("core/html-end.html") }}
+
+<script>
+   $(function () {
+      Home.init();
+   });
    
-   
-   {{= it.include("core/html-end.html") }}
-   
-   <script>
-      $(function () {
-         Home.init();
-      });
-      
-   </script>
-   
-   
-   
+</script>
+
+

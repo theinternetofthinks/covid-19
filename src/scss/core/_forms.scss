@@ -49,11 +49,6 @@ fieldset {
         z-index: 1;
         background-image: url($caret);
         content: "";
-        
-        @include media-breakpoint-down(sm) {
-            top:20px;
-            
-        }
     }
     select{
         font-size: 14px;
@@ -112,7 +107,7 @@ input[type="radio"]{
             pointer-events: none;
         }
     }
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
         display: inline-block;
         margin-bottom: 15px;
     }
@@ -171,7 +166,7 @@ input[type="radio"]{
     margin-right: 15px;
     margin-bottom: 15px;
     
-	@include media-breakpoint-down(md) {
+	@include media-breakpoint-down(lg) {
         margin-right: 0;
         width: 100%;
 	}	
@@ -180,14 +175,14 @@ input[type="radio"]{
     .form-control{
         &.lg {
             min-width: 300px;
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(lg) {
                 width: 100%;
             }	
         
         }
         &.md {
             min-width: 200px;
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(lg) {
                 width: 100%;
             }	         
         }
