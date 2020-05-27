@@ -1,81 +1,107 @@
 $mobileHeaderHeight: 60px;
 $headerButtonHeight: 68px;
-
-header {
-   padding:20px;
-   border-bottom: 1px solid #979797;
-   margin-left: -15px;
-   margin-right: -15px;
-   display: flex;
-    align-items: center;
-    justify-content: space-between;
-   @include media-breakpoint-down(md) {
-      padding-bottom: 15px;
-   }
-   .title-wrapper {
-      padding-top: 0;
-      display: inline-block;
+header{
+   .logo-mobile {
+      display: none;
       @include media-breakpoint-down(md) {
-         max-width: 60%;
-         padding-top: 0;
-      }
-   }
-   .login-wrapper {
-      @include media-breakpoint-down(md) {
-         display: inline-block;
-         max-width: 40%;
-      }    
-   }
-   .main-title {
-      @include media-breakpoint-down(md) {
-         font-size: 25px;
-         display: inline-block;
-         span {
-            display: block;;
+         display: block;
+         background: #575E62;
+         width: 100vw!important;
+         padding: 10px;
+         position: relative;
+         left: 50%;
+         right: 50%;
+         margin-left: -50vw;
+         margin-right: -50vw;
+         color: #fff;
+         text-align: center;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         img {
+            max-width: 120px;
+            display: block;
+            margin: auto;
          }
       }
    }
-   .user-wrapper {
+   .header-content {
+      padding:20px;
+      border-bottom: 1px solid #979797;
+      margin-left: -15px;
+      margin-right: -15px;
       display: flex;
-      @extend .mb-4;
-      justify-content: flex-end;
-      + div {
-         a {
-            @include media-breakpoint-down(md) {
-               width: 20px;
-               height: 20px;
-               display:inline-block;
-               overflow: hidden;
-            }      
+      align-items: center;
+      justify-content: space-between;
+      
+      @include media-breakpoint-down(md) {
+         padding-bottom: 15px;
+      }
+      .title-wrapper {
+         padding-top: 0;
+         display: inline-block;
+         @include media-breakpoint-down(md) {
+            max-width: 60%;
+            padding-top: 0;
          }
       }
-      .user{
-         font-size: 1.5rem;
-         text-align: right;
+      .login-wrapper {
          @include media-breakpoint-down(md) {
-            display:none;
-         }
-         + img.ico {
-            height: auto;
-            max-width: 40px;
-            margin-left: 15px;
-            @include media-breakpoint-down(md) {
-               max-height: 20px;
+            display: inline-block;
+            max-width: 40%;
+         }    
+      }
+      .main-title {
+         @include media-breakpoint-down(md) {
+            font-size: 25px;
+            display: inline-block;
+            span {
+               display: block;;
             }
          }
-      }      
-   }
- 
-   .logo-clinica-wrapper {
-      display: inline-block;
-      border-left: 1px solid #979797;
-      padding-left: 10px;
-      .logo-clinica {
-         max-width: 80px;
-         @include media-breakpoint-down(md) {
-            max-height: 50px;
+      }
+      .user-wrapper {
+         display: flex;
+         @extend .mb-4;
+         justify-content: flex-end;
+         + div {
+            a {
+               @include media-breakpoint-down(md) {
+                  width: 20px;
+                  height: 20px;
+                  display:inline-block;
+                  overflow: hidden;
+               }      
+            }
+         }
+         .user{
+            font-size: 1.5rem;
+            text-align: right;
+            @include media-breakpoint-down(md) {
+               display:none;
+            }
+            + img.ico {
+               height: auto;
+               max-width: 40px;
+               margin-left: 15px;
+               @include media-breakpoint-down(md) {
+                  max-height: 20px;
+               }
+            }
+         }      
+      }
+      
+      .logo-clinica-wrapper {
+         display: inline-block;
+         border-left: 1px solid #979797;
+         padding-left: 10px;
+         .logo-clinica {
+            max-width: 80px;
+            @include media-breakpoint-down(md) {
+               max-height: 50px;
+            }
          }
       }
+      
    }
-
 }
