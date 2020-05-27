@@ -112,6 +112,11 @@ input[type="radio"]{
             pointer-events: none;
         }
     }
+    @include media-breakpoint-down(md) {
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
 }
 .checkbox {
     position: relative;
@@ -165,13 +170,26 @@ input[type="radio"]{
     display: inline-block;
     margin-right: 15px;
     margin-bottom: 15px;
+    
+	@include media-breakpoint-down(md) {
+        margin-right: 0;
+        width: 100%;
+	}	
+
     select,
     .form-control{
         &.lg {
             min-width: 300px;
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }	
+        
         }
         &.md {
             min-width: 200px;
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }	         
         }
     }
     input[type=date],

@@ -12,6 +12,12 @@
 		}
 	}
 }
+.block-certificates-wrapper {
+	display: flex;
+	@include media-breakpoint-down(md) {
+		justify-content: space-around;
+	}
+}
 .block-certificate {
 	font-weight: bold;
 	text-align: center;

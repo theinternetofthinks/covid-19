@@ -21,6 +21,9 @@ button {
    font-weight: normal;
    border-radius: 0.4rem;
    white-space: inherit;
+   @include media-breakpoint-down(md) {
+      font-size: 1.2rem;
+	}	
    &.btn-hamburguer {
       display: inline-block;
       width: 25px;
