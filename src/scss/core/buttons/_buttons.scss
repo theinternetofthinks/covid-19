@@ -14,7 +14,25 @@ button {
 [data-toggle="modal"] {
    cursor: pointer;
 }
-
+.btn-ico {
+   border: 0;
+   background: 0;
+ }
+ .has-action a {
+   border: 1px solid #ffc502;
+   border-radius: 4px;
+   display: inline-block;
+   padding: 4px;
+   background: #fff;
+   padding-left: 10px;
+   padding-right: 10px;
+ }
+ .has-action a:hover {
+   border: 1px solid #ffc502;
+   background: #ffc502;
+   border-radius: 4px;
+   color: #fff;
+ }
 .btn {
    transition: all 0.3s ease;
    font-size: 1.4rem;
@@ -100,7 +118,7 @@ button {
       background-color: #324277;
       color: $color-white;
       border: 0px solid;
-      border-radius: 30px;
+      border-radius: 6px;
       position: relative;
       padding-left: 50px;
       &:hover {
@@ -114,6 +132,7 @@ button {
          width: 20px;
          height: 20px;
          left: 20px;
+         top:10px;
       }     
    }
    &.btn-primary {
@@ -122,7 +141,7 @@ button {
       background-color: $color-primary;
       color: $color-white;
       border: 0px solid;
-      border-radius: 30px;
+      border-radius: 6px;
 
       [class*="icon-"] {
          &.absolute {
@@ -165,7 +184,7 @@ button {
       background-color: $color-secondary;
       color: $color-primary;
       border: 0px solid;
-      border-radius: 30px;
+      border-radius: 6px;
       &_transparent{
          background: none;
          border: 1px solid $color-primary;

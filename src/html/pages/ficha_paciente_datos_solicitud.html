@@ -56,10 +56,11 @@
                      
                      <h3 class="title-section">Datos de la Solicitud</h3>
                      <p>Fecha de la Solicitud: <strong>20/05/2020</strong></p>
-                     <div class="d-flex">
-                        <p>Solicitud para obtener el certificado</p>
-                        
+                     <div class="d-flex align-items-center">
+                        <span class="mr-3"> Solicitud para obtener el certificado</span>
+  
                         {{= it.include("common/forms/select.html", {
+                           "margin":"mb-0",
                            "options" : "",
                            "selected" : "Cocid 19",
                            "id" : "nacionalidad",
@@ -82,7 +83,18 @@
                <section>
                   <h3 class="title-section">Datos del Certificado</h3>
                   
-                  
+                     <div class="box-white">
+
+                        <div class="d-flex">
+                           
+                           <span class="text-18 color-grey">Certificado pendiente de emitir </span>
+
+                        </div>
+                        <button class="btn btn-primary" type="button"></button>
+
+                     </div>
+
+                  </div>
                   
                </section>
                
@@ -115,7 +127,7 @@
             <h2 class="title text-30 mb-4 font-bold">Crear Nueva solicitud para Santiago Pérez</h2>
             <div class="separator">
                
-               Solicitud para obtener el certificado 
+               <span class="mr-3"> Solicitud para obtener el certificado</span>
                {{= it.include("common/forms/select.html", {
                   "options" : "",
                   "selected" : "Nacionalidad",

@@ -17,7 +17,7 @@
          <li>
             <a href="">
                <img src="img/icons/ico-ficha.png" class="ico sm"/>
-               <span>>Fichas del Paciente</span>
+               <span>Fichas del Paciente</span>
             </a>
          </li>
          <li>
@@ -259,7 +259,7 @@
                      <h2 class="title-section">Histórico de solicitudes</h2>
                      {{= it.include("common/forms/text-field.html", {
                         "placeholder" : "Buscar por id de Solicitud",
-                        "type" : "text",
+                        "type" : "search",
                         "id" : "buscarSoliditus",
                         "class" : "lg",
                         "disabled" : "false",})
@@ -299,8 +299,7 @@
          <div class="modal-body">
             <h2 class="title text-30 mb-4 font-bold">Crear Nueva solicitud para Santiago Pérez</h2>
             <div class="separator">
-               
-               Solicitud para obtener el certificado 
+               <span class="mr-3"> Solicitud para obtener el certificado</span>
                {{= it.include("common/forms/select.html", {
                   "options" : "",
                   "selected" : "Nacionalidad",
